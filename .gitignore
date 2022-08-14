@@ -7,3 +7,6 @@
 
 # IntelliJ
 .idea
+
+# VS Code
+.code-workspace
