@@ -11,6 +11,14 @@
     {%- assign news_tools = news.tools -%}
     {%- assign news_url = news.url | relative_url -%}
 
+    {%- if news.external_url -%}
+      {%- assign news_url = news.external_url -%}
+      {%- assign external    = true -%}
+    {%- else -%}
+      {%- assign news_url = news.url | relative_url -%}
+      {%- assign external    = false -%}
+    {%- endif -%}
+
     {% include news/news-card.html %}
 
   {% endfor %}
